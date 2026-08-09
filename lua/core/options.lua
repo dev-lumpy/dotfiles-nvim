@@ -22,3 +22,6 @@ vim.opt.secure = true -- Pregunta antes de ejecutar .nvim.lua desconocido
 
 -- Borde derecho para saber cuando toco la pared
 vim.opt.colorcolumn = "80"
+
+-- Barra de estado siempre visible (ayuda a separar la terminal del código)
+vim.opt.laststatus = 2

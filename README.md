@@ -46,6 +46,15 @@ Leader key: `<Space>`
 | `dd` + `p` | Mover archivo (cortar y pegar, luego `<C-s>`) |
 | `ciw` | Renombrar (cambiar palabra bajo cursor, luego `<C-s>`) |
 
+## Android (solo con jdtls activo)
+
+| Tecla | Acción |
+|-------|--------|
+| `<leader>ad` | Listar dispositivos |
+| `<leader>ai` | Build + instalar APK |
+| `<leader>ar` | Lanzar app |
+| `<leader>al` | Logs de crash |
+
 ## General
 
 | Tecla | Acción |
