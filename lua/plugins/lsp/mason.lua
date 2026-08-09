@@ -24,6 +24,7 @@ return {
                     "cssls",
                     "ts_ls",
                     "jdtls",
+                    "kotlin_language_server",
                 },
             })
         end,

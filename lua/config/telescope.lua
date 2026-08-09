@@ -46,6 +46,12 @@ vim.keymap.set("n", "<leader>fg", builtin.live_grep, { desc = "Buscar texto en a
 -- Busca dentro de los archivos que tienes abiertos actualmente (Buffers)
 vim.keymap.set("n", "<leader>fb", builtin.buffers, { desc = "Buscar buffers abiertos" })
 
+-- Lista de funciones/símbolos del archivo actual (navegación rápida)
+vim.keymap.set("n", "<leader>fs", builtin.lsp_document_symbols, { desc = "Símbolos del archivo" })
+
+-- Lista de todos los errores/diagnósticos del proyecto
+vim.keymap.set("n", "<leader>fd", builtin.diagnostics, { desc = "Diagnósticos del proyecto" })
+
 -- Busca en tu historial de comandos recientes
 vim.keymap.set("n", "<leader>fh", builtin.help_tags, { desc = "Buscar ayuda de Neovim" })
 

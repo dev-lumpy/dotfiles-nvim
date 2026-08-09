@@ -25,3 +25,14 @@ vim.keymap.set("n", "<C-Right>", ":vertical resize +2<CR>", { desc = "Incrementa
 -- Cerrar la ventana dividida actual
 vim.keymap.set("n", "<leader>cc", ":close<CR>", { desc = "Cerrar ventana actual (Split)" })
 
+-- Ver logs del LSP (diagnóstico rápido)
+vim.keymap.set("n", "<leader>ll", function()
+  vim.cmd("edit " .. vim.lsp.log.get_filename())
+end, { desc = "Abrir LSP log" })
+
+-- Copiar mensajes de :messages a un buffer temporal
+vim.keymap.set("n", "<leader>lm", function()
+  vim.cmd("enew | put =execute('messages')")
+  vim.bo.buftype = "nofile"
+end, { desc = "Messages en buffer" })
+

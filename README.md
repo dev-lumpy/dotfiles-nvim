@@ -19,7 +19,9 @@ Leader key: `<Space>`
 | `gr` | Buscar referencias |
 | `gi` | Ir a implementación |
 | `K` | Ver documentación (hover) |
-| `<leader>d` | Mostrar diagnósticos flotantes |
+| `<leader>d` | Diagnóstico de la línea actual |
+| `<leader>fd` | Todos los diagnósticos del proyecto |
+| `<leader>fs` | Listar funciones/símbolos del archivo |
 
 ## Ventanas
 
@@ -50,3 +52,5 @@ Leader key: `<Space>`
 |-------|--------|
 | `<C-s>` | Guardar archivo |
 | `<leader>fh` | Buscar ayuda de Neovim |
+| `<leader>ll` | Abrir LSP log |
+| `<leader>lm` | Volcar :messages a buffer |

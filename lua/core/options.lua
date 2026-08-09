@@ -19,3 +19,6 @@ vim.opt.signcolumn = "yes"
 -- Permitir archivos de configuracion locales por proyecto (.nvim.lua)
 vim.opt.exrc = true
 vim.opt.secure = true -- Pregunta antes de ejecutar .nvim.lua desconocido
+
+-- Borde derecho para saber cuando toco la pared
+vim.opt.colorcolumn = "80"

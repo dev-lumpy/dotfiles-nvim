@@ -1,7 +1,9 @@
 return {
     cmd = {
         "jdtls",
-        "--jvm-arg=-javaagent:/usr/share/java/lombok/lombok.jar",
+    },
+    cmd_env = {
+        JAVA_HOME = "/usr/lib/jvm/java-21-openjdk",
     },
     root_markers = {
         "build.gradle",
@@ -16,8 +18,8 @@ return {
             configuration = {
                 runtimes = {
                     {
-                        name = "JavaSE-17",
-                        path = "/usr/lib/jvm/java-17-openjdk",
+                        name = "JavaSE-21",
+                        path = "/usr/lib/jvm/java-21-openjdk",
                     },
                 },
             },
@@ -31,6 +33,13 @@ return {
             import = {
                 gradle = {
                     enabled = true,
+                    version = "9.5.0",
+                    java = {
+                        home = "/usr/lib/jvm/java-21-openjdk",
+                    },
+                    wrapper = {
+                        enabled = true,
+                    },
                 },
                 maven = {
                     enabled = true,
