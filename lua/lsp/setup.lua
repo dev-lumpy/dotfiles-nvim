@@ -4,16 +4,8 @@ require("lsp.diagnostics")
 -- Cargando la configuración de keymaps
 require("lsp.keymaps")
 
--- Borde redondeado para la ventana de hover (K)
-vim.lsp.config("*", {
-    handlers = {
-        ["textDocument/hover"] = function(err, result, ctx, config)
-            config = config or {}
-            config.border = "rounded"
-            vim.lsp.handlers["textDocument/hover"](err, result, ctx, config)
-        end,
-    },
-})
+-- Cargando keymaps por buffer (LspAttach)
+require("lsp.on_attach")
 
 local servers = {
     rust_analyzer = "rust",
@@ -22,6 +14,7 @@ local servers = {
     cssls         = "css",   -- Añadido (El servidor se llama cssls, tu archivo css.lua)
     ts_ls         = "ts",
     jdtls         = "jdtls", -- Java / Kotlin / Android
+    pyright       = "pyright"
     -- kotlin_language_server = "kotlin", -- Dormido hasta que tenga soporte Android
 }
 

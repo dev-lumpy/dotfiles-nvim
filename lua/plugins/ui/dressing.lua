@@ -1,3 +1,5 @@
 return {
-     -- Por ahora asi no mas
+    "stevearc/dressing.nvim",
+    event = "VeryLazy",
+    opts = {},
 }

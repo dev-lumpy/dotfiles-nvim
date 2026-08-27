@@ -25,6 +25,7 @@ return {
                     "ts_ls",
                     "jdtls",
                     "kotlin_language_server",
+                    "pyright"
                 },
             })
         end,

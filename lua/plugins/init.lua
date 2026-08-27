@@ -12,6 +12,6 @@ return {
     -- Aqui serian para el analizador semantico
     { import = "plugins.lsp" },
 
-    -- Aqui importamos para que nos ayude con recomendaciones de codigo
-    { import = "plugins.coding.blink" }
+    -- Plugins de codificacion: autocompletado, pares, delimitadores
+    { import = "plugins.coding" }
 }

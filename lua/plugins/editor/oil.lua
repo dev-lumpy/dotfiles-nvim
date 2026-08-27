@@ -28,6 +28,7 @@ return {
                 show_hidden = true,
             },
             float = {
+                enabled = true,
                 max_width = 60,
                 max_height = 30,
                 border = "rounded",
