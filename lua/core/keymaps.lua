@@ -99,3 +99,25 @@ end, { desc = "Toggle terminal" })
 -- Escapar de la terminal al modo normal (en vez de <C-\><C-n>)
 vim.keymap.set("t", "<Esc>", "<C-\\><C-n>", { desc = "Salir de terminal" })
 
+-- Seleccionar la función actual (funciona en todos los lenguajes)
+vim.keymap.set('n', 'vaf', function()
+    local node = vim.treesitter.get_node()
+    if not node then return end
+    
+    -- Buscar el nodo de función
+    while node do
+        local node_type = node:type()
+        if node_type:match('function') or 
+           node_type:match('method') or
+           node_type:match('declaration') or
+           node_type:match('definition') or
+           node_type:match('block') then
+            local start_row, start_col, end_row, end_col = node:range()
+            vim.api.nvim_win_set_cursor(0, { start_row + 1, start_col })
+            vim.cmd('normal! v')
+            vim.api.nvim_win_set_cursor(0, { end_row + 1, end_col })
+            return
+        end
+        node = node:parent()
+    end
+end, { desc = 'Select function' })

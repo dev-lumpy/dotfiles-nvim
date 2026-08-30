@@ -22,13 +22,13 @@ vim.api.nvim_create_autocmd("LspAttach", {
         for _, win in ipairs(vim.api.nvim_list_wins()) do
           if vim.api.nvim_win_get_buf(win) == target_bufnr then
             vim.api.nvim_set_current_win(win) -- Saltamos a la ventana donde ya existía
-            vim.lsp.util.show_document(target, { focus = true })
+            vim.lsp.util.show_document(target, "utf-8", { focus = true })
             return
           end
         end
 
         -- Si no está abierto en ninguna parte, lo abrimos normalmente en la ventana actual
-        vim.lsp.util.show_document(target, { focus = true })
+        vim.lsp.util.show_document(target, "utf-8", { focus = true })
       end)
     end, { buffer = bufnr, desc = "Ir a definición inteligentemente" })
 
